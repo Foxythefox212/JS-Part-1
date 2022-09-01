@@ -19,13 +19,13 @@ logger();
 logger();
 logger();
 //Function can also receive data and return data
-function fruitProcessor(apples, oranges) {
-  const juice = `Juice with ${apples} apples and ${oranges} oranges`;
-  return juice;
+function fruitProcessors(apples, oranges) {
+  const juices = `Juice with ${apples} apples and ${oranges} oranges`;
+  return juices;
 }
-const appleJuice = fruitProcessor(5, 0);
+const appleJuice = fruitProcessors(5, 0);
 console.log(appleJuice);
-// console.log(fruitProcessor(5, 0));
+console.log(fruitProcessors(5, 0));
 
 const appleOrangeJuice = fruitProcessor(2, 4);
 console.log(appleOrangeJuice);
@@ -68,3 +68,18 @@ const yearsUntilRetirement = (birthYear, firstName) => {
 };
 console.log(yearsUntilRetirement(1986, "Ruxandra"));
 console.log(yearsUntilRetirement(1976, "Nicoleta"));
+
+// FUNCTION CALLING OTHER FUNCTIONS
+//Inainte sa facem sucul trebuie sa taiem fructele in bucati mai mici
+function cutFruitPieces(fruit) {
+  return fruit * 4;
+}
+//Sus am taiat fructele  si jos am adaugat taiatul la fruitProccesor
+function fruitProcessor(apples, oranges) {
+  const applePieces = cutFruitPieces(apples);
+  const orangePieces = cutFruitPieces(oranges);
+
+  const juice = `Juice with ${applePieces} piece of apples and ${orangePieces} pieces of oranges`;
+  return juice;
+}
+console.log(fruitProcessor(2, 3));
