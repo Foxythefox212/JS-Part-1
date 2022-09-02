@@ -60,14 +60,14 @@ console.log(age3);
 // Avem un parametru(birthyear) si mai multe statement si cand avem
 //mai multe statement trebuie trecut return...daca avem doar 1 statement
 //ca si deasupra atunci nu mai punem return
-const yearsUntilRetirement = (birthYear, firstName) => {
-  const age = 2022 - birthYear;
-  const retirement = 65 - age;
-  // return retirement;
-  return `${firstName} retires in ${retirement} years`;
-};
-console.log(yearsUntilRetirement(1986, "Ruxandra"));
-console.log(yearsUntilRetirement(1976, "Nicoleta"));
+// const yearsUntilRetirement = (birthYear, firstName) => {
+//   const age = 2022 - birthYear;
+//   const retirement = 65 - age;
+//   // return retirement;
+//   return `${firstName} retires in ${retirement} years`;
+// };
+// console.log(yearsUntilRetirement(1986, "Ruxandra"));
+// console.log(yearsUntilRetirement(1976, "Nicoleta"));
 
 // FUNCTION CALLING OTHER FUNCTIONS
 //Inainte sa facem sucul trebuie sa taiem fructele in bucati mai mici
@@ -83,3 +83,26 @@ function fruitProcessor(apples, oranges) {
   return juice;
 }
 console.log(fruitProcessor(2, 3));
+
+//REVIEW(RECAPITULARE)
+
+const calcAge = function (birthYear) {
+  return 2022 - birthYear;
+};
+const yearsUntilRetirement = function (birthYear, firstName) {
+  const age = calcAge(birthYear);
+  const retirement = 65 - age;
+
+  if (retirement > 0) {
+    console.log(`${firstName} retires in ${retirement} years`);
+    return retirement;
+  } else {
+    console.log(`${firstName} has already retired 🎉`);
+    return -1;
+  }
+
+  return retirement;
+  // return `${firstName} retires in ${retirement} years`;
+};
+console.log(yearsUntilRetirement(1986, "Ruxandra"));
+console.log(yearsUntilRetirement(1950, "Nicoleta"));
