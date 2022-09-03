@@ -37,3 +37,32 @@ const secondAustralia = percentageOfWorld2(500);
 console.log(secondEuropa); //13.924
 console.log(secondAmerica); //11.3924
 console.log(secondAustralia); //6.3291
+
+// CHALLENGE 01
+// JONAS
+const calcAverage = (a, b, c) => (a + b + c) / 3;
+console.log(calcAverage(3, 4, 5));
+
+// TEST 1
+let scoreDolphins = calcAverage(44, 23, 71);
+let scoreKoalas = calcAverage(65, 54, 49);
+console.log(scoreDolphins, scoreKoalas); // 46 56
+
+const checkWinner = function (avgDolphins, avgKoalas) {
+  if (avgDolphins >= 2 * avgKoalas) {
+    console.log(`Dolphins win the trophy 🏆 (${avgDolphins} vs ${avgKoalas})`);
+  } else if (avgKoalas >= 2 * avgDolphins) {
+    console.log(`Koalas win the trophy 🏆 (${avgKoalas} vs ${avgDolphins})`);
+  } else {
+    console.log(`No team wins...`);
+  }
+};
+checkWinner(scoreDolphins, scoreKoalas); //Is stand alone adica nu depinde
+//exemplu pt ca nu depinde
+checkWinner(523, 176); // Dolphins win
+
+// TEST 2
+scoreDolphins = calcAverage(85, 54, 41);
+scoreKoalas = calcAverage(23, 34, 27);
+console.log(scoreDolphins, scoreKoalas); //60 28
+checkWinner(scoreDolphins, scoreKoalas); //Dolphins win  pt ca are dublu scorul
