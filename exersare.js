@@ -38,6 +38,26 @@ console.log(secondEuropa); //13.924
 console.log(secondAmerica); //11.3924
 console.log(secondAustralia); //6.3291
 
+// 03-ARROW FUNCTION
+const percentageOfWorld3 = (populations) => (populations / 7900) * 100;
+const thirdEuropa = percentageOfWorld3(1100);
+const thirdAmerica = percentageOfWorld3(900);
+const thirdAustralia = percentageOfWorld3(500);
+console.log(thirdEuropa);
+console.log(thirdAmerica);
+console.log(thirdAustralia);
+
+// FUNCTION CALLING OTHER FUNCTIONS
+const describePopulation = function (country, populations) {
+  const percentage = percentageOfWorld1(populations);
+  const description = `${country} has ${populations} million people, which is about ${percentage} % of the world.`;
+  console.log(description);
+};
+
+describePopulation("Romania", 24);
+describePopulation("China", 1140);
+describePopulation("USA", 332);
+
 // CHALLENGE 01
 // JONAS
 const calcAverage = (a, b, c) => (a + b + c) / 3;
