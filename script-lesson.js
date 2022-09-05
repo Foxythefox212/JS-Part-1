@@ -106,3 +106,49 @@ const yearsUntilRetirement = function (birthYear, firstName) {
 };
 console.log(yearsUntilRetirement(1986, "Ruxandra"));
 console.log(yearsUntilRetirement(1950, "Nicoleta"));
+
+//ARRAY(DATA STRUCTURE)
+
+// const friend1 = "Andrada";
+// const friend2 = "Cristina";
+// const friend3 = "Alexandra";
+
+const friends = ["Andrada", "Cristian", "Alexandra"];
+console.log(friends);
+
+const years = new Array(1986, 1987, 1988, 1989); //Asta e tot un Array
+//dar e Array functie() si trebuie folosit new
+
+console.log(friends[0]);
+console.log(friends[2]);
+
+console.log(friends.length);
+console.log(friends[friends.length - 1]);
+
+friends[2] = "Ioana";
+console.log(friends);
+//friends = ["May",  "Iunie"]-nu se poate schimba intreg Array
+//Dar se poate schimba parti din el chaiar daca e declarat cu const
+//variabilele primitive nu se pot schimba
+
+const ruxandra = ["Ruxandra", "Laura", 2022 - 1986, "programming", friends];
+console.log(ruxandra);
+
+//Exercise array
+
+const calcAge4 = function (birthYear) {
+  return 2022 - birthYear;
+};
+const yearss = [1999, 2002, 2005, 2009, 2013];
+
+const age4 = calcAge4(yearss[0]);
+const age5 = calcAge4(yearss[1]);
+const age6 = calcAge4(yearss[years.length - 1]);
+console.log(age4, age5, age6); //23, 20 , 13
+
+const ages = [
+  calcAge4(yearss[0]),
+  calcAge4(yearss[1]),
+  calcAge4(yearss[years.length - 1]),
+];
+console.log(ages); //23, 20, 13
