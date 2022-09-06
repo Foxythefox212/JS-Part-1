@@ -152,3 +152,41 @@ const ages = [
   calcAge4(yearss[years.length - 1]),
 ];
 console.log(ages); //23, 20, 13
+
+//Array Method: .push, unshift(ADD-ULTIMUL SI PRIMUL)
+//              .pop, shift(REVOME-ULTIMUL SI PRIMUL)
+//              .indexOf(IN CE POZITIE SE AFLA IN Array)
+//              .includes(True sau Flase daca se afla in Array)
+// ADD ELEMENTS
+
+const friend = ["Andrada", "Cristina", "Alexandra"];
+const newLength = friend.push("Loredana"); //Push returneaza length de aceea
+//i-am asignat la variabila newLength ca sa vedem ca retureaza length
+console.log(friend);
+console.log(newLength);
+
+friend.unshift("Laura"); //Pune la inceputul Array-ului elementul
+// ce il vrem adaugat in sir []
+//De asemenea returneaza length Array-ului
+console.log(friend);
+
+// REMOVE ELEMENTS
+
+friend.pop(); // Last element si nu trebuie completata paranteza
+//Se subintelege ca ultimul e eliminat
+//Returneaza si el ceva dar returneaza elementul eliminat
+console.log(friend);
+const popped = friend.pop();
+console.log(popped);
+
+friend.shift(); //Elimina primul element
+console.log(friend);
+
+console.log(friend.indexOf("Cristina")); //In ce pozitie se afla =1
+console.log(friend.indexOf("Andrada")); //In ce pozitie se afla =0
+
+friend.push(23);
+console.log(friend.includes("Cristina")); //True
+console.log(friend.includes("Elisa")); //False
+console.log(friend.includes("23")); //False = ii testat cu strict
+//equality adica 23 === "23" False
