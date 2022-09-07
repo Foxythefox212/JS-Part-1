@@ -107,7 +107,7 @@ const yearsUntilRetirement = function (birthYear, firstName) {
 console.log(yearsUntilRetirement(1986, "Ruxandra"));
 console.log(yearsUntilRetirement(1950, "Nicoleta"));
 
-//ARRAY(DATA STRUCTURE)
+//ARRAY(DATA STRUCTURE) = !!! Ordinea in care sunt scrise conteaza !!!!!!
 
 // const friend1 = "Andrada";
 // const friend2 = "Cristina";
@@ -190,3 +190,46 @@ console.log(friend.includes("Cristina")); //True
 console.log(friend.includes("Elisa")); //False
 console.log(friend.includes("23")); //False = ii testat cu strict
 //equality adica 23 === "23" False
+
+//OBJECTS = ! Oridinea in care sunt scrise nu conteaza !
+
+const ruxandraLaura = {
+  firstName: "Ruxandra",
+  lastName: "Laura",
+  age: 2022 - 1986,
+  job: "programmer",
+  friends: ["Me", "Myself", "I"],
+};
+
+// Dots an Bracket Notation (. [])
+console.log(ruxandraLaura.lastName);
+console.log(ruxandraLaura["firstName"]); // Aici in Bracket putem pune
+// ce expresie vrem
+// Exemplu :
+const nameKey = "Name";
+console.log(ruxandraLaura["first" + nameKey]);
+console.log(ruxandraLaura["last" + nameKey]);
+
+// Exemplu :
+// const interestedIn = prompt(
+//   "What do you want to know about Ruxandra? Choose between firstName, lastName, age, job, and friends"
+// );
+// console.log(interestedIn); //undefined
+// console.log(ruxandraLaura[interestedIn]); //programmer
+
+// if (ruxandraLaura[interestedIn]) {
+//   console.log(ruxandraLaura[interestedIn]);
+// } else {
+//   console.log(
+//     "Wrong request! Choose between firstName, lastName, age, job, and friends"
+//   );
+// }
+// Le-am pus asa sa nu tot sara mesajul de la prompt
+ruxandraLaura.location = "Romania";
+ruxandraLaura["twitter"] = "I don't have twitter";
+console.log(ruxandraLaura);
+
+//Little Challenge:
+console.log(
+  `${ruxandraLaura.firstName} has ${ruxandraLaura.friends.length} friends, and his best friend is called ${ruxandraLaura.friends[0]}`
+);
