@@ -99,3 +99,42 @@ const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
 //Bonusul
 const totals = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]];
 console.log(bills, tips, totals);
+
+// ARRAYS
+
+const populatione = [24, 50, 100, 250];
+console.log(populatione.length === 4);
+
+const percentages = [
+  percentageOfWorld1(populatione[0]),
+  percentageOfWorld1(populatione[1]),
+  percentageOfWorld1(populatione[2]),
+  percentageOfWorld1(populatione[3]),
+];
+console.log(percentages);
+
+// Basic ARRAY OPERATIONS (METHOD)
+
+const neighbours = ["Moldova", "Ungaria", "Ucraina", "Bulgaria"];
+neighbours.push = "Utopia";
+console.log(neighbours);
+
+neighbours.pop();
+console.log(neighbours);
+
+if (!neighbours.includes("Germany")) {
+  console.log(`Propably not a central European country`);
+}
+
+neighbours[neighbours.indexOf("Ungaria")] = "Buda";
+console.log(neighbours);
+
+// OBJECTS
+
+const myCountry = {
+  country: "Romania",
+  capital: "Bucuresti",
+  language: "Romana",
+  population: 24,
+  neighbours: ["Moldova", "Ungaria", "Serbia"],
+};
