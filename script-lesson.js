@@ -233,3 +233,45 @@ console.log(ruxandraLaura);
 console.log(
   `${ruxandraLaura.firstName} has ${ruxandraLaura.friends.length} friends, and his best friend is called ${ruxandraLaura.friends[0]}`
 );
+
+// OBJECT METHODS
+
+const ruxandraLaur = {
+  firstName: "Ruxandra",
+  lastName: "Laura",
+  birthYear: 1986,
+  job: "programmer",
+  friends: ["Me", "Myself", "I"],
+  hasDriversLicense: true,
+
+  // calcAge: function (birthYear) { //Functia daca e in interiorul object
+  //   // se numeste METHOD
+  //   return 2022 - birthYear;
+  // },
+
+  // calcAge: function () {
+  //   // console.log(this);
+  //   return 2022 - this.birthYear;
+  // },
+
+  calcAge: function () {
+    this.age = 2022 - this.birthYear;
+    return this.age;
+  },
+  getSummary: function () {
+    return `${this.firstName} is a ${this.calcAge()} year old ${
+      this.job
+    }, and she has ${this.hasDriversLicense ? "a" : "no"} driver's license} `;
+  },
+};
+
+console.log(ruxandraLaur.calcAge()); // 36
+
+console.log(ruxandraLaur.age);
+// console.log(ruxandraLaur.age);
+// console.log(ruxandraLaur.age);
+
+// console.log(ruxandraLaur["calcAge"](1986)); // 36
+
+// Little Challenge
+console.log(ruxandraLaur.getSummary());
