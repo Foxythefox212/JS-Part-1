@@ -138,3 +138,33 @@ const myCountry = {
   population: 24,
   neighbours: ["Moldova", "Ungaria", "Serbia"],
 };
+
+// Dots vs Bracket Notation
+// 1
+console.log(`${myCountry.country} has ${myCountry.population} million finnish-speaking
+people, ${myCountry.neighbours.lenght} neighbouring countries and a capital called ${myCountry.capital}`);
+
+// 2
+console.log(`${myCountry.country} has ${
+  myCountry.population + 2
+} million finnish-speaking
+people, ${neighbours.lenght} neighbouring countries and a capital called ${
+  myCountry.capital
+}`);
+
+// 3
+console.log(`${myCountry.country} has ${
+  myCountry.population
+} million finnish-speaking
+people, ${
+  myCountry["population"] - 2
+} neighbouring countries and a capital called ${myCountry.capital}`);
+
+// Jonas
+//console.log 2
+myCountry.population += 2;
+console.log(myCountry.population); // 26
+
+//console.log 3
+myCountry["population"] -= 2;
+console.log(myCountry.population); // 24

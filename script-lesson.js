@@ -275,3 +275,15 @@ console.log(ruxandraLaur.age);
 
 // Little Challenge
 console.log(ruxandraLaur.getSummary());
+
+// Iteration: THE FOR LOOP// Repetitive actions
+
+console.log("Lifting weight repetion 1 🏋️‍♂️");
+console.log("Lifting weight repetion 2 🏋️‍♂️");
+console.log("Lifting weight repetion 3 🏋️‍♂️");
+console.log("Lifting weight repetion 4 🏋️‍♂️");
+
+// For loop keep running while condition is True(rep <= 10)
+for (let rep = 1; rep <= 10; rep++) {
+  console.log(`Lifting weight repetion ${rep} 🏋️‍♂️`);
+}
