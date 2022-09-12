@@ -287,3 +287,105 @@ console.log("Lifting weight repetion 4 🏋️‍♂️");
 for (let rep = 1; rep <= 10; rep++) {
   console.log(`Lifting weight repetion ${rep} 🏋️‍♂️`);
 }
+
+// Looping Array, Breaking and Continue
+
+const ruxandraRo = [
+  "Ruxandra",
+  "Laura",
+  2022 - 1986,
+  "programming",
+  friends,
+  true,
+];
+
+const types = []; // Empty Array
+
+// console.log(ruxandraR[1]
+// console.log(ruxandraR[2]
+// ...
+// console.log(ruxandraR[4]
+//ruxandraR[5] nu exista
+for (let i = 0; i < ruxandraRo.length; i++) {
+  // Reading from jonas array
+  console.log(ruxandraRo[i], typeof ruxandraRo[i]);
+
+  // Filing types array
+  types[i] = typeof ruxandraRo[i];
+
+  types.push(typeof ruxandraRo[i]);
+}
+
+console.log(types);
+
+const Year = [1986, 1976, 1978, 2008];
+const agee = [];
+
+for (let i = 0; i < Year.length; i++) {
+  agee.push(2022 - Year[i]);
+}
+console.log(agee);
+
+// Continue and Break
+console.log("---ONLY STRINGS---");
+for (let i = 0; i < ruxandraRo.length; i++) {
+  if (typeof ruxandraRo[i] !== "string") continue; //Only log strings
+
+  console.log(ruxandraRo[i], typeof ruxandraRo[i]);
+}
+
+console.log("---BREAK WITH NUMBER---");
+for (let i = 0; i < ruxandraRo.length; i++) {
+  if (typeof ruxandraRo[i] === "number") break; //Only log strings
+
+  console.log(ruxandraRo[i], typeof ruxandraRo[i]);
+}
+
+// Looping Backwards(Inapoi) and Loops in Loops
+
+const ruxandraLau = [
+  "Ruxandra",
+  "Laura",
+  2022 - 1986,
+  "programmer",
+  ["Me", "Myself", "I"],
+  true,
+];
+// Lectia trecuta am inceput 0, 1, 2, 3, 4.
+// Acum incepem de la 4, 3, 2, 1, 0=>(Ultimul index)
+
+for (let i = ruxandraLau.length - 1; i >= 0; i--) {
+  console.log(i, ruxandraLau[i]);
+}
+
+// LOOP in LOOP
+for (let exercise = 1; exercise <= 3; exercise++) {
+  console.log(`----- STARTING EXERCISE -----${exercise}`);
+
+  for (let repeteLop = 1; repeteLop < 6; repeteLop++) {
+    console.log(
+      `Exercise ${exercise} Lifting weight repetition ${repeteLop} 🏋️‍♂️`
+    );
+  }
+}
+
+// THE WHILE LOOP
+
+// for (let rep = 1; rep <= 10; rep++) {
+//   console.log(`Lifting weights repetition ${rep} 🏋️‍♀️`);
+// } Ii scris ca sa se poata compara cu while loop
+
+let rep1 = 1;
+while (rep1 <= 10) {
+  console.log(`WHILE: Lifting weights repetition ${rep1} 🏋️‍♀️`);
+  rep1++;
+}
+
+let dice = Math.trunc(Math.random() * 6) + 1;
+// console.log(dice);// Apar diferite numere cand dam refresh la pagina
+
+while (dice !== 6) {
+  console.log(`You role a ${dice}`);
+  dice = Math.trunc(Math.random() * 6) + 1;
+  if (dice === 6) console.log(`Loop is about to end`);
+} // Cand dice-ul da 6 atunci nu apare nimic pe consola
