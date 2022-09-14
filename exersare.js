@@ -168,3 +168,33 @@ console.log(myCountry.population); // 26
 //console.log 3
 myCountry["population"] -= 2;
 console.log(myCountry.population); // 24
+
+// UN PIC DE RECAPITULARE
+// Value & Variable
+const tara = "Romania";
+const continent = "Europa";
+let populatie = 23;
+console.log(tara, continent, populatie);
+const nume = "Ruxandra";
+const prenume = "Laura";
+let varsta = 36;
+console.log(nume, prenume, varsta);
+
+// Data Types
+const iiInsula = false;
+const limbaVorbita = "romana";
+console.log(
+  typeof iiInsula,
+  typeof limbaVorbita,
+  typeof tara,
+  typeof populatie
+);
+let engleza = "romana";
+let romana = true;
+let populatiePlecata = 5000;
+console.log(typeof engleza, typeof romana, typeof populatiePlecata);
+
+// Let, Const, Var
+//  let = folosit atunci cand variabila se poate schimba
+// const = cand variabila e "fixa" nu se schimba
+// var = nu prea se mai fioloseste pt ca cred ca se poate modifica variabila ?
