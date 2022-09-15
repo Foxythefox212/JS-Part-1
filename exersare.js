@@ -198,3 +198,27 @@ console.log(typeof engleza, typeof romana, typeof populatiePlecata);
 //  let = folosit atunci cand variabila se poate schimba
 // const = cand variabila e "fixa" nu se schimba
 // var = nu prea se mai fioloseste pt ca cred ca se poate modifica variabila ?
+
+// BASIC OPERATOR
+let calcul = populatie / 2;
+console.log(calcul); // 11.5
+populatie++;
+console.log(populatie); // 24
+let finland = 6;
+console.log(populatie > finland); // 24 6 //true
+let averagePopulatie = 33;
+console.log(averagePopulatie > populatie); // 33 24 //true
+let descriere =
+  tara +
+  " is in " +
+  continent +
+  " , and its " +
+  populatie +
+  " million people speak " +
+  limbaVorbita;
+console.log(descriere);
+
+// STRING and TEMPLATE LITERALS
+console.log(
+  `${tara} is in ${continent}, and its ${populatie} million people speak ${limbaVorbita}`
+);
