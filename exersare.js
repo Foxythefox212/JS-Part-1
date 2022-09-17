@@ -173,7 +173,7 @@ console.log(myCountry.population); // 24
 // Value & Variable
 const tara = "Romania";
 const continent = "Europa";
-let populatie = 23;
+let populatie = 24;
 console.log(tara, continent, populatie);
 const nume = "Ruxandra";
 const prenume = "Laura";
@@ -222,3 +222,32 @@ console.log(descriere);
 console.log(
   `${tara} is in ${continent}, and its ${populatie} million people speak ${limbaVorbita}`
 );
+
+// IF/ ELSE STATEMENT
+if (populatie > 33) {
+  console.log(`${tara} ${populatie} is above average`);
+} else {
+  console.log(
+    `${tara} population is ${
+      averagePopulatie - populatie
+    } million below average`
+  );
+}
+
+// Daca ora e intre (6:00 si 12:00): Buna dimineata;
+// Daca e intre (13:00 si 20:00): Buna ziua;
+// Daca e intre (21:00 si 5:00): Buna seara;
+let ora = 22;
+if (ora >= 6 && ora < 12) console.log("Buna dimineata");
+else if (ora >= 13 && ora < 20) console.log("Buna ziua");
+else if (ora >= 21 && ora < 5) {
+  console.log("Buna seara"); // Aceasta linie nu se mai executa
+  // si mi-am dat seama de ce : pt ca 5 din coada nu e mai mic ca 22....
+} else console.log("Saluta cum vrei tu");
+
+// TYPE CONVERSION and COERCION
+// "9" - "5" =Number 4
+// "19" - "13" + "17" = String "617"
+// "19" - "13" + 17 =Number 23
+// "123" < 57; False=> Comparatia rezulta in Boolean....
+// 5 + 6 +"4" + 9 - 4 - 2 = Number 1143; Am omis un 1
