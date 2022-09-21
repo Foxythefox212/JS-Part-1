@@ -251,3 +251,29 @@ else if (ora >= 21 && ora < 5) {
 // "19" - "13" + 17 =Number 23
 // "123" < 57; False=> Comparatia rezulta in Boolean....
 // 5 + 6 +"4" + 9 - 4 - 2 = Number 1143; Am omis un 1
+
+// EQUALITY OPERATOR === vs ==
+const numeVecini = Number();
+// prompt("How many neighbour countries does your country have?")
+if (numeVecini === 1) {
+  console.log("Only 1 border!");
+} else if (numeVecini > 1) {
+  console.log("More than 1 border");
+} else {
+  console.log("No borders");
+}
+// Cu semnul === la comparatia cu 1 da No Border deoarece prompt ii
+// string si atunci punem Number() ca sa schimbam string la Numar
+
+// LOGICAL OPERATOR
+if (limbaVorbita === "engleza" && populatie < 50 && iiInsula === false) {
+  console.log("You should live in Romania");
+} else {
+  console.log("Romania does not meet your criteria");
+}
+// Jonas o scris asa:
+//if (language === 'english' && population < 50 && !isIsland)
+//  {
+//   console.log(`You should live in ${country} :)`);
+//   } else {
+//   console.log(`${country} does not meet your criteria :(` );
