@@ -312,3 +312,34 @@ populati > 33
 console.log(
   `${tara}'s population is ${populati > 33 ? "above" : "below"} average`
 );
+
+// PARTEA II
+//  FUNCTIONS
+function descriereTara(tara, populatie, capitala) {
+  return `${tara} has ${populatie} million people and its capital is ${capitala}`;
+}
+const functieTara = descriereTara("Romania", 24, "Bucuresti");
+const functieTara2 = descriereTara("Spania", 45, "Madrid");
+const functieTara3 = descriereTara("Germania", 83, "Berlin");
+console.log(functieTara);
+console.log(functieTara2);
+console.log(functieTara3);
+
+// FUNCTION DECLARATION vs EXPRESSION
+function procentajLume(populatie) {
+  return (populatie / 7900) * 100;
+}
+const procentajLume1 = procentajLume(1100);
+const procentajLume2 = procentajLume(500);
+const procentajLume3 = procentajLume(100);
+console.log(procentajLume1);
+console.log(procentajLume2);
+console.log(procentajLume3);
+// Functie Expressie
+const ProcentajLume = function (populatie) {
+  return (populatie / 7900) * 100;
+};
+const procentajLume4 = ProcentajLume(900);
+const procentajLume5 = ProcentajLume(300);
+const procentajLume6 = ProcentajLume(70);
+console.log(procentajLume4, procentajLume5, procentajLume6);
